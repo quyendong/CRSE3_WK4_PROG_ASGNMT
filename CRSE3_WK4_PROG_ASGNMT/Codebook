@@ -1,12 +1,12 @@
-Codebook:
+# Codebook
 The test data set and training data set were combined by subject, features, and activity given in the original dataset.
 The new data set is located in Tidy.txt.
 This data set contains the average of each variable for each activity and each subject.
 
-## Subject
+# Subject
  The Test subject
  
-## Activity Labels
+# Activity Labels
  WALKING
  WALKING_UPSTAIRS
  WALKING_DOWNSTAIRS
@@ -14,7 +14,7 @@ This data set contains the average of each variable for each activity and each s
  STANDING
  LAYING
 
-## Features Labels
+# Features Labels
 The following features (left-side) were changed to variables (right-side) to better described the terms more clearly:
  "tBodyAcc-mean()-X"                        "TimeBodyAccelerometerMean()-X"             
  "tBodyAcc-mean()-Y"                        "TimeBodyAccelerometerMean()-Y"     
@@ -103,7 +103,7 @@ The following features (left-side) were changed to variables (right-side) to bet
  "angle(Y,gravityMean)"                     "Angle(Y,GravityMean)" 
  "angle(Z,gravityMean)"                     "Angle(Z,GravityMean)"                                       
                                                                                                       
-  Refer to document features_info.txt for more information on the data.
+  # Refer to document features_info.txt for more information on the data.
  
           
 
