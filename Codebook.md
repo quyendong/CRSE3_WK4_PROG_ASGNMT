@@ -41,7 +41,7 @@ This data set contains the average of each variable for each activity and each s
 
 
 
-# Features Labels
+# Feature Labels
 
 The following features (left-side) were changed to variables (right-side) to better described the terms more clearly:
 
@@ -217,4 +217,4 @@ The following features (left-side) were changed to variables (right-side) to bet
 
  "angle(Z,gravityMean)"                     "Angle(Z,GravityMean)"                                       
                                                                                                    
-  ### Refer to document features_info.txt for more information on the data.
+  **Refer to document features_info.txt for more information on the data.**
