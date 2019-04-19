@@ -103,7 +103,7 @@ The following features (left-side) were changed to variables (right-side) to bet
  "angle(Y,gravityMean)"                     "Angle(Y,GravityMean)" 
  "angle(Z,gravityMean)"                     "Angle(Z,GravityMean)"                                       
                                                                                                       
-  Refer to document features_info for more information on the data.
+  Refer to document features_info.txt for more information on the data.
  
           
 
