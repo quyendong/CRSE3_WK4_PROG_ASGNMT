@@ -1,5 +1,5 @@
 ## 19APR2019 Quyen Dong 
-## CRSE3_WK4_PROG_ASGNMT
+##CRSE3_WK4_PROG_ASGNMT
 ##
 ## Data for the project: 
 ## https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
@@ -19,6 +19,8 @@
 ##    each variable for each activity and each subject.
 
 ##Set directory to where data folder is
+setwd("C:/Users/RDITLQTD/Desktop/Data_Science_Specialization/CRSE3_GettingAndCleaningData/CRSE3_WK4_PROG_ASGNMT/getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset")
+dir <- "C:/Users/RDITLQTD/Desktop/Data_Science_Specialization/CRSE3_GettingAndCleaningData/CRSE3_WK4_PROG_ASGNMT/getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset"
 library(data.table)
 library(dplyr)
 ##Get the Features Names of the Data
@@ -79,12 +81,12 @@ tidyData$Subject <- as.factor(tidyData$Subject)
 ##Give appropriate labels to tidyData using gsub
 names(tidyData) <- gsub("Acc", "Accelerometer", names(tidyData))
 names(tidyData) <- gsub("^t", "Time", names(tidyData))
+names(tidyData) <- gsub("\\(t", "\\(Time", names(tidyData))
 names(tidyData) <- gsub("-mean()", "Mean", names(tidyData))
 names(tidyData) <- gsub("-std()", "STD", names(tidyData))
 names(tidyData) <- gsub("Gyro", "Gyroscope", names(tidyData))
 names(tidyData) <- gsub("Mag", "Magnitude", names(tidyData))
 names(tidyData) <- gsub("^f", "Frequency", names(tidyData))
-names(tidyData) <- gsub("Freq()", "Frequency", names(tidyData))
 names(tidyData) <- gsub("BodyBody", "Body", names(tidyData))
 names(tidyData) <- gsub("angle", "Angle", names(tidyData))
 names(tidyData) <- gsub("gravity", "Gravity", names(tidyData))
@@ -99,6 +101,7 @@ completeTidyData <- aggregate(.~Subject + Activity, tidyData, FUN = mean)
 completeTidyData <- completeTidyData[order(completeTidyData$Subject, completeTidyData$Activity),]
 
 ##Set directory to where you want to save the data.
+setwd("C:/Users/RDITLQTD/Desktop/Data_Science_Specialization/CRSE3_GettingAndCleaningData/CRSE3_WK4_PROG_ASGNMT")
 
 ##Write data to table. File is called Tidy.txt
 write.table(completeTidyData, file = "Tidy.txt", row.names = FALSE)
