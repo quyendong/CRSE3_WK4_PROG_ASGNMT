@@ -1,12 +1,23 @@
 # Codebook
 
 The test data set and training data set were combined by subject, features, and activity given in the original dataset.
+The original data set can be found in the /getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset
 
 The new data set is located in Tidy.txt.
-
 This data set contains the average of each variable for each activity and each subject.
 
-
+# How To Get Tidy Data
+1. Use read.table to read the activity labels and features.
+2. Get the Test and Train data sets. (subjectTest, featuresTest, activityTest, subjectTrain, featuresTrain, activityTrain)
+3. Combine the data sets with rbind.
+4. Change the column names to appropriate names. Use feature.txt to name features.
+5. Column bind the data sets to make a complete dataset.
+6. Look for mean or std in column names using **grep**. Use these columns to sort through the complete data set to make the tidy data.
+7. Use **gsub** to give appropriate labels.
+8. **aggregate** the subject and activity of the tidy data using the mean function.
+9. Order the data to using Subject first and Activity second.
+10. Set the directory to where the text file "Tidy.txt" will be saved.
+11. Write the table out.
 
 # Subject
 
@@ -205,7 +216,5 @@ The following features (left-side) were changed to variables (right-side) to bet
  "angle(Y,gravityMean)"                     "Angle(Y,GravityMean)" 
 
  "angle(Z,gravityMean)"                     "Angle(Z,GravityMean)"                                       
-
-                                                                                                      
-
-  # Refer to document features_info.txt for more information on the data.
+                                                                                                   
+  ### Refer to document features_info.txt for more information on the data.
